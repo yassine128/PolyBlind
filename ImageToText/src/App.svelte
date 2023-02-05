@@ -2,10 +2,10 @@
 	import Tesseract from 'tesseract.js';
 	import { global } from 'svelte/internal';
 	
-	var image;
+	var image ="../images/test2.jpg";
 	var response = "";
 	let defaultSpeed = 1; 	
-	var language = "fr";
+	var language = "fr-FR";
 	var pauseOuDemarre = "stop";
 	var isLoading = false; 
 	var currentFont = 30; 
@@ -32,11 +32,11 @@
 
 	function changeLang() {
 		window.speechSynthesis.cancel();
-		if (language == "fr") {
+		if (language == "fr-FR") {
 			language = "en-US";
 		} 
 		else {
-			language = "fr";
+			language = "fr-FR";
 		}
 	}
 
@@ -197,7 +197,7 @@
 	<button on:click={() => changeSpeed(5)}>Read Faster</button>
 	<button on:click={() => changeSpeed(1)}>Normal speed</button>
 	<button on:click={changeLang}>
-		{#if language == "fr"}
+		{#if language == "fr-FR"}
 		French
 		{:else}
 		English
