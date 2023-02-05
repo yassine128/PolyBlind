@@ -1,36 +1,19 @@
 <script>
-	import Tesseract from 'tesseract.js'
+	import Tesseract from 'tesseract.js';
 	import { global } from 'svelte/internal';
-
-	let response = "";
+	
+	var image;
+	var response = "";
 	let defaultSpeed = 1; 	
-
-	/*let opencambutton = document.querySelector("#opencamera");
-	let video = document.querySelector("#video");
-	let takepicbutton = document.querySelector("#takepic");
-	let canvas = document.querySelector("#canvas");
-
-
-	function opencambutton() {
-		let stream = await navigator.mediaDevices.getUserMedia( {video: { 
-			width: 1280 , 
-			height: 720 }});
-		video.srcObject = stream;
-	}	
-
-	function takepicbutton() {
-		canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-		var image = canvas.toDataURL('image/jpeg');
-		console.log(image)  
-	}
-*/
 
 	function fasterSpeech() {
 		defaultSpeed = 5;
+		textToVoice(response); 
 	}
 	
 	function normalSpeech() {
 		defaultSpeed = 1;
+		textToVoice(response);
 	}
 
 	function textToVoice(message) {
@@ -48,6 +31,27 @@
 
 	else{console.log(' Speech Synthesis Not Supported'); }
 	}
+
+	let opencambutton = document.querySelector("#opencamera");
+		let video = document.querySelector("#video");
+		let takepicbutton = document.querySelector("#takepic");
+		let canvas = document.querySelector("#canvas");
+		
+		opencambutton.addEventListener('click', async function() {
+			   let stream = await navigator.mediaDevices.getUserMedia( {video: { 
+				width: 1280 , 
+				height: 720 }});
+			video.srcObject = stream;
+		});
+		takepicbutton.addEventListener('click', function() {
+			   canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+			    image = canvas.toDataURL('image/jpeg');
+			
+			   console.log(image)
+
+		});	
+
+
 
 	/*
 	 * Function to detect text in the image 
@@ -67,7 +71,7 @@
 
 <main>
 	<button on:click={fasterSpeech}>Read Faster</button>
-	<button on:click={normalSpeech}>normal speed</button>
+	<button on:click={normalSpeech}>Normal speed</button>
 	<button on:click={logTesseract}>Read Image!</button>
 	<p>Your text is: </p>
 	<p>{response}</p>

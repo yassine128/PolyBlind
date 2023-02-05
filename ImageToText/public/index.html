@@ -19,28 +19,10 @@
 	<video id="video" width="1280" height="720" autoplay></video>
 	<button id="takepic">Prendre une photo</button>
 	<canvas id="canvas" width="1280" height="720"></canvas>
+	<div id="output"></div>
 	<script>
 
+	</script>
 
-		let opencambutton = document.querySelector("#opencamera");
-		let video = document.querySelector("#video");
-		let takepicbutton = document.querySelector("#takepic");
-		let canvas = document.querySelector("#canvas");
-		
-		
-		opencambutton.addEventListener('click', async function() {
-			   let stream = await navigator.mediaDevices.getUserMedia( {video: { 
-				width: 1280 , 
-				height: 720 }});
-			video.srcObject = stream;
-		});
-		takepicbutton.addEventListener('click', function() {
-		
-			   canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-			   let image = canvas.toDataURL('image/jpeg');
-			console.log(image)  
-		
-		});		
-		</script>
 </body>
 </html>
