@@ -106,6 +106,8 @@
 	}
 
 	function goBack() {
+		window.speechSynthesis.cancel();
+		response = "";
 		numPage--; 
 	}
 
@@ -155,7 +157,11 @@
     },
     "switch language":()=>{
 		changeLang();
-    }
+    },
+	"picture":()=>{
+		console.log('here');
+		document.querySelector('#takepic').click();
+	}
 
       };
 
