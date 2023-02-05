@@ -1,0 +1,257 @@
+/* screen - desktop-main */
+
+.desktop-main {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px none;
+  display: flex;
+  height: 982px;
+  overflow: hidden;
+  width: 1512px;
+}
+
+.desktop-main .background {
+  background-color: var(--ocean-green);
+  height: 982px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1161px;
+}
+
+.desktop-main .button_eng {
+  align-items: flex-start;
+  background-color: var(--tuna);
+  border-radius: 18px;
+  display: flex;
+  height: 51px;
+  left: 581px;
+  min-width: 51px;
+  position: absolute;
+  top: 491px;
+}
+
+.desktop-main .button_fr {
+  align-items: flex-start;
+  background-color: var(--tuna);
+  border-radius: 18px;
+  display: flex;
+  height: 51px;
+  left: 581px;
+  min-width: 51px;
+  position: absolute;
+  top: 377px;
+}
+
+.desktop-main .read_button {
+  align-items: flex-start;
+  background-color: var(--tuna);
+  border-radius: 40px;
+  display: flex;
+  height: 52px;
+  left: 202px;
+  min-width: 151px;
+  padding: 9.3px 31.4px;
+  position: absolute;
+  top: 802px;
+}
+
+.desktop-main .preview {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 41px;
+  box-shadow: 0px 4px 4px #00000040;
+  display: flex;
+  height: 503px;
+  justify-content: flex-end;
+  left: 69px;
+  min-width: 415px;
+  padding: 34.0px 37.2px;
+  position: absolute;
+  top: 239px;
+}
+
+.desktop-main .title {
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 314px;
+}
+
+.desktop-main .bubble {
+  background-color: var(--gallery);
+  border-radius: 102px 0px 0px 102px;
+  height: 1024px;
+  left: 792px;
+  position: absolute;
+  top: 0;
+  width: 720px;
+}
+
+.desktop-main .take-a-picture {
+  left: 1176px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 521px;
+  width: 232px;
+}
+
+.desktop-main .upload-a-file-png-jpeg-txt {
+  left: 915px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 521px;
+  width: 232px;
+}
+
+.desktop-main .button_pic {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 58.5px;
+  display: flex;
+  height: 117px;
+  left: 1233px;
+  min-width: 117px;
+  padding: 22px 23px;
+  position: absolute;
+  top: 388px;
+}
+
+.desktop-main .button_upload {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 58.5px;
+  display: flex;
+  height: 117px;
+  left: 973px;
+  min-width: 117px;
+  padding: 23.1px 23px;
+  position: absolute;
+  top: 387px;
+}
+
+.desktop-main .line-1 {
+  left: 1090px;
+}
+
+.desktop-main .background-1 {
+  background-color: var(--ocean-green);
+  height: 982px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1219px;
+}
+
+.desktop-main .button_eng-1 {
+  align-items: flex-start;
+  background-color: var(--tuna);
+  border-radius: 18px;
+  display: flex;
+  height: 51px;
+  left: 612px;
+  min-width: 51px;
+  position: absolute;
+  top: 491px;
+}
+
+.desktop-main .button_fr-1 {
+  align-items: flex-start;
+  background-color: var(--tuna);
+  border-radius: 18px;
+  display: flex;
+  height: 51px;
+  left: 612px;
+  min-width: 51px;
+  position: absolute;
+  top: 379px;
+}
+
+.desktop-main .read_button-1 {
+  align-items: flex-start;
+  background-color: var(--tuna);
+  border-radius: 40px;
+  cursor: pointer;
+  display: flex;
+  height: 52px;
+  left: 233px;
+  min-width: 151px;
+  padding: 9.3px 31.4px;
+  position: absolute;
+  top: 802px;
+}
+
+.desktop-main .preview-2 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 41px;
+  box-shadow: 0px 4px 4px #00000040;
+  display: flex;
+  height: 503px;
+  justify-content: flex-end;
+  left: 69px;
+  min-width: 470px;
+  padding: 34.0px 42.1px;
+  position: absolute;
+  top: 239px;
+}
+
+.desktop-main .preview-3 {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 434px;
+  width: 383px;
+}
+
+.desktop-main .reader {
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 314px;
+}
+
+.desktop-main .bubble-1 {
+  background-color: var(--gallery);
+  border-radius: 102px 0px 0px 102px;
+  height: 982px;
+  left: 792px;
+  position: absolute;
+  top: 0;
+  width: 720px;
+}
+
+.desktop-main .button_pic-1 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 58.5px;
+  cursor: pointer;
+  display: flex;
+  height: 117px;
+  left: 1233px;
+  min-width: 117px;
+  padding: 22px 23px;
+  position: absolute;
+  top: 388px;
+}
+
+.desktop-main .line-2 {
+  left: 1162px;
+}
+
+.desktop-main .line {
+  height: 354px;
+  object-fit: cover;
+  position: absolute;
+  top: 286px;
+  width: 1px;
+}

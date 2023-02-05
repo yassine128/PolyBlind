@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
+    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
+    <meta name="viewport" content="width=1512, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/desktop-main.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="desktop-main" />
+    <div class="container-center-horizontal">
+      <div class="desktop-main screen">
+        <div class="overlap-group6">
+          <div class="background"></div>
+          <div class="button_eng">
+            <div class="overlap-group">
+              <div class="x15 inter-bold-ocean-green-24px">x1.5</div>
+              <div class="rectangle-403"></div>
+              <div class="eng inter-bold-ocean-green-22px">ENG</div>
+            </div>
+          </div>
+          <div class="button_fr">
+            <div class="overlap-group">
+              <div class="x15-4 inter-bold-ocean-green-24px">x1.5</div>
+              <div class="rectangle-403"></div>
+              <div class="fr inter-bold-ocean-green-22px">FR</div>
+            </div>
+          </div>
+          <div class="read_button"><div class="read inter-bold-white-24px">Read!</div></div>
+          <div class="preview"><div class="preview-1 inter-normal-black-14px">Preview...</div></div>
+          <div class="logo">
+            <div class="overlap-group-1">
+              <div class="paper_fill"><img class="subtract" src="img/subtract@2x.png" alt="Subtract" /></div>
+              <h1 class="title italiana-normal-white-48px">Reader</h1>
+            </div>
+          </div>
+          <div class="bubble"></div>
+          <div class="take-a-picture inter-bold-black-20px">Take a picture</div>
+          <p class="upload-a-file-png-jpeg-txt inter-bold-black-20px">Upload a file <br />(png, jpeg, txt)</p>
+          <div class="button_pic">
+            <div class="insta">
+              <div class="ellipse-container">
+                <div class="ellipse-46"></div>
+                <div class="ellipse-55"></div>
+              </div>
+            </div>
+          </div>
+          <div class="button_upload"><img class="folder_up" src="img/folder-up@2x.png" alt="Folder_up" /></div>
+          <img class="line-1 line" src="img/line-1-1@2x.png" alt="Line 1" />
+          <div class="background-1"></div>
+          <div class="button_eng-1">
+            <div class="overlap-group">
+              <div class="x15-4 inter-bold-ocean-green-24px">x1.5</div>
+              <div class="rectangle-403"></div>
+              <div class="eng-1 inter-bold-ocean-green-22px">ENG</div>
+            </div>
+          </div>
+          <div class="button_fr-1">
+            <div class="overlap-group">
+              <div class="x15-4 inter-bold-ocean-green-24px">x1.5</div>
+              <div class="rectangle-403"></div>
+              <div class="fr-1 inter-bold-ocean-green-22px">FR</div>
+            </div>
+          </div>
+          <a href="desktop-reader.html">
+            <div class="read_button-1"><div class="read inter-bold-white-24px">Read!</div></div></a
+          >
+          <div class="preview-2"><div class="preview-3 inter-normal-black-14px">Preview...</div></div>
+          <div class="logo">
+            <div class="overlap-group-1">
+              <div class="paper_fill"><img class="subtract" src="img/subtract@2x.png" alt="Subtract" /></div>
+              <div class="reader italiana-normal-white-48px">Reader</div>
+            </div>
+          </div>
+          <div class="bubble-1"></div>
+          <div class="take-a-picture inter-bold-black-20px">Take a picture</div>
+          <p class="upload-a-file-png-jpeg-txt inter-bold-black-20px">Upload a file <br />(png, jpeg, txt)</p>
+          <a href="desktop-take.html">
+            <button class="button_pic-1" id="opencamera">
+              <div class="insta">
+                <div class="ellipse-container">
+                  <div class="ellipse-46"></div>
+                  <div class="ellipse-55"></div>
+                </div>
+              </div></button
+          ></a>
+          <div class="button_upload"><img class="folder_up" src="img/folder-up@2x.png" alt="Folder_up" /></div>
+          <img class="line-2 line" src="img/line-1-1@2x.png" alt="Line 2" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let opencambutton = document.querySelector("#opencamera");
+    opencambutton.addEventListener('click', async function () {
+      let stream = await navigator.mediaDevices.getUserMedia({
+        video: {
+          width: 1280,
+          height: 720
+        }
+      });
+      video.srcObject = stream;
+    });
+  let video = document.querySelector("#video");
+</script>

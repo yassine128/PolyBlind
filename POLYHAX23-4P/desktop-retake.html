@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
+    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
+    <meta name="viewport" content="width=1512, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/desktop-retake.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="desktop-retake" />
+    <div class="container-center-horizontal">
+      <div class="desktop-retake screen">
+        <div class="overlap-group6">
+          <div class="background"></div>
+          <div class="button_eng">
+            <div class="overlap-group">
+              <div class="x15 inter-bold-ocean-green-24px">x1.5</div>
+              <div class="rectangle-403"></div>
+              <div class="eng inter-bold-ocean-green-22px">ENG</div>
+            </div>
+          </div>
+          <div class="button_fr">
+            <div class="overlap-group">
+              <div class="x15-4 inter-bold-ocean-green-24px">x1.5</div>
+              <div class="rectangle-403"></div>
+              <div class="fr inter-bold-ocean-green-22px">FR</div>
+            </div>
+          </div>
+          <div class="read_button"><div class="read inter-bold-white-24px">Read!</div></div>
+          <div class="preview"><div class="preview-1 inter-normal-black-14px">Preview...</div></div>
+          <div class="logo">
+            <div class="overlap-group-1">
+              <div class="paper_fill"><img class="subtract" src="img/subtract@2x.png" alt="Subtract" /></div>
+              <h1 class="title italiana-normal-white-48px">Reader</h1>
+            </div>
+          </div>
+          <div class="bubble"></div>
+          <div class="take-a-picture inter-bold-black-20px">Take a picture</div>
+          <p class="upload-a-file-png-jpeg-txt inter-bold-black-20px">Upload a file <br />(png, jpeg, txt)</p>
+          <div class="button_pic">
+            <div class="insta">
+              <div class="ellipse-container">
+                <div class="ellipse-46"></div>
+                <div class="ellipse-55"></div>
+              </div>
+            </div>
+          </div>
+          <div class="button_upload"><img class="folder_up" src="img/folder-up@2x.png" alt="Folder_up" /></div>
+          <img class="line-1 line" src="img/line-1@2x.png" alt="Line 1" />
+          <div class="background-1"></div>
+          <div class="button_eng">
+            <div class="overlap-group">
+              <div class="x15-4 inter-bold-ocean-green-24px">x1.5</div>
+              <div class="rectangle-403"></div>
+              <div class="eng-1 inter-bold-ocean-green-22px">ENG</div>
+            </div>
+          </div>
+          <div class="button_fr">
+            <div class="overlap-group">
+              <div class="x15-4 inter-bold-ocean-green-24px">x1.5</div>
+              <div class="rectangle-403"></div>
+              <div class="fr-1 inter-bold-ocean-green-22px">FR</div>
+            </div>
+          </div>
+          <div class="read_button"><div class="read inter-bold-white-24px">Read!</div></div>
+          <div class="preview"><div class="preview-1 inter-normal-black-14px">Preview...</div></div>
+          <div class="logo">
+            <div class="overlap-group-1">
+              <div class="paper_fill"><img class="subtract" src="img/subtract@2x.png" alt="Subtract" /></div>
+              <div class="reader italiana-normal-white-48px">Reader</div>
+            </div>
+          </div>
+          <div class="bubble-1"></div>
+          <div class="take-a-picture inter-bold-black-20px">Take a picture</div>
+          <p class="upload-a-file-png-jpeg-txt inter-bold-black-20px">Upload a file <br />(png, jpeg, txt)</p>
+          <div class="button_pic">
+            <div class="insta">
+              <div class="ellipse-container">
+                <div class="ellipse-46"></div>
+                <div class="ellipse-55"></div>
+              </div>
+            </div>
+          </div>
+          <div class="button_upload"><img class="folder_up" src="img/folder-up@2x.png" alt="Folder_up" /></div>
+          <img class="line-2 line" src="img/line-1@2x.png" alt="Line 2" />
+          <div class="window_retake">
+            <a href="desktop-main.html">
+              <div class="button_back animate-enter">
+                <img class="arrow_left" src="img/arrow-left@2x.png" alt="Arrow_left" /></div
+            ></a>
+            <div class="flex-col">
+              <div class="rectangle-4041"></div>
+              <div class="button_-container">
+                <a href="desktop-take.html">
+                  <article class="button_retake"><div class="read-1 inter-bold-white-24px">Retake</div></article></a
+                ><a href="desktop-main.html">
+                  <article class="button_use"><div class="read-1 inter-bold-white-24px">Use</div></article></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function ShowOnScroll() {
+        this.toShow = [];
+        this.nextEventY = undefined;
+      }
+
+      ShowOnScroll.prototype.show = function (e) {
+        e.style.display = "";
+      };
+
+      ShowOnScroll.prototype.hide = function (e) {
+        e.style.display = "none";
+      };
+
+      ShowOnScroll.prototype.getTop = function (e) {
+        if (e.Top != undefined && e.Top != 0) {
+          return e.Top;
+        }
+        var top = 0;
+        var iter = e;
+        do {
+          top += iter.offsetTop || 0;
+          iter = iter.offsetParent;
+        } while (iter);
+        e.Top = top;
+        return top;
+      };
+
+      ShowOnScroll.prototype.onScroll = function () {
+        var screenBottom = window.pageYOffset + window.innerHeight;
+        if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
+          return;
+        }
+        this.nextEventY = undefined;
+        for (var i = 0; i < this.toShow.length; i++) {
+          var e = this.toShow[i];
+          var top = this.getTop(e);
+          if (top < screenBottom) {
+            this.show(e);
+            this.toShow.shift();
+            i--;
+          } else {
+            this.nextEventY = top;
+            break;
+          }
+        }
+      };
+
+      ShowOnScroll.prototype.resetScrolling = function () {
+        // Clear state
+        var screenBottom = window.pageYOffset + window.innerHeight;
+        for (var i = 0; i < this.toShow.length; i++) {
+          var e = this.toShow[i];
+          this.show(e);
+        }
+        this.toShow = [];
+        this.nextEventY == undefined;
+
+        // Collect items
+        var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
+        itemsToShowOnScroll = itemsToShowOnScroll.filter(function (e) {
+          return e.getAttribute("show-on-scroll") != undefined;
+        });
+        var getTop = this.getTop;
+        itemsToShowOnScroll.sort(function (a, b) {
+          return getTop(a) - getTop(b);
+        });
+        for (var i = 0; i < itemsToShowOnScroll.length; i++) {
+          var e = itemsToShowOnScroll[i];
+          var top = this.getTop(e);
+          if (top < screenBottom) {
+            continue;
+          }
+          this.toShow.push(e);
+          this.hide(e);
+          this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
+        }
+      };
+
+      ShowOnScroll.prototype.handleEvent = function (e) {
+        switch (e.type) {
+          case "scroll":
+            this.onScroll();
+            break;
+          case "resize":
+            this.resetScrolling();
+            break;
+        }
+      };
+
+      ShowOnScroll.prototype.init = function () {
+        this.resetScrolling();
+        window.addEventListener("scroll", this);
+        window.addEventListener("resize", this);
+      };
+
+      // After anima-src
+      setTimeout(function () {
+        var instShowOnScroll = new ShowOnScroll();
+        instShowOnScroll.init();
+      }, 250);
+    </script>
+  </body>
+</html>

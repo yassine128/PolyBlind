@@ -1,0 +1,220 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Inter:400,700|Italiana:400");
+/* The following line is used to measure usage of this code in production. For more info see our usage billing page */
+@import url("https://px.animaapp.com/63df1a9c241dcc1f34c43355.63df1a9cadcdfbdea71f54e9.5FmifJJ.hcp.png");
+
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.overlap-group6 {
+  height: 1024px;
+  position: relative;
+  width: 1512px;
+}
+
+.overlap-group {
+  border-radius: 18px;
+  height: 51px;
+  position: relative;
+  width: 51px;
+}
+
+.x15 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 9px;
+  width: 51px;
+}
+
+.rectangle-403 {
+  background-color: var(--tuna);
+  border-radius: 18px;
+  height: 51px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 51px;
+}
+
+.eng {
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 9px;
+  width: 51px;
+}
+
+.fr {
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 9px;
+  width: 51px;
+}
+
+.read {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 31px;
+  text-align: center;
+  width: 88px;
+}
+
+.preview-1 {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 435px;
+  width: 338px;
+}
+
+.logo {
+  align-items: flex-start;
+  display: flex;
+  height: 73px;
+  left: 48px;
+  min-width: 314px;
+  position: absolute;
+  top: 47px;
+}
+
+.overlap-group-1 {
+  height: 74px;
+  margin-top: -1px;
+  position: relative;
+  width: 314px;
+}
+
+.paper_fill {
+  align-items: center;
+  display: flex;
+  height: 73px;
+  left: 16px;
+  min-width: 56px;
+  padding: 0 4.7px;
+  position: absolute;
+  top: 1px;
+}
+
+.subtract {
+  height: 55px;
+  width: 47px;
+}
+
+.insta {
+  align-items: center;
+  display: flex;
+  height: 71px;
+  min-width: 71px;
+  padding: 0 7.9px;
+}
+
+.ellipse-container {
+  background-image: url(../img/rectangle-1@2x.png);
+  background-size: 100% 100%;
+  height: 55px;
+  position: relative;
+  width: 55px;
+}
+
+.ellipse-46 {
+  background-color: var(--log-cabin);
+  border-radius: 4.44px;
+  height: 9px;
+  left: 36px;
+  position: absolute;
+  top: 10px;
+  width: 9px;
+}
+
+.ellipse-55 {
+  border: 2px solid;
+  border-color: var(--log-cabin);
+  border-radius: 11.83px;
+  height: 24px;
+  left: 16px;
+  position: absolute;
+  top: 16px;
+  width: 24px;
+}
+
+.folder_up {
+  height: 70px;
+  width: 71px;
+}
+
+.eng-1 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 9px;
+  width: 51px;
+}
+
+.fr-1 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 9px;
+  width: 51px;
+}
+
+.flex-col {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  margin-top: 15.99px;
+  min-height: 565px;
+  width: 884px;
+}
+
+.read-1 {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 38px;
+  text-align: center;
+  width: 104px;
+}
+
+.x15-4 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 9px;
+  width: 51px;
+}

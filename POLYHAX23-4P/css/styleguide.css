@@ -1,0 +1,66 @@
+:root { 
+  --black: #000000;
+  --gallery: #eeeded;
+  --log-cabin: #222222;
+  --ocean-green: #34b175;
+  --tuna: #33363f;
+  --white: #ffffff;
+ 
+  --font-size-l: 22px;
+  --font-size-m: 20px;
+  --font-size-s: 14px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 30px;
+  --font-size-xxxl: 32px;
+  --font-size-xxxxl: 48px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-italiana: "Italiana", Helvetica;
+}
+.inter-bold-ocean-green-24px {
+  color: var(--ocean-green);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-bold-ocean-green-22px {
+  color: var(--ocean-green);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-bold-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-bold-white-24px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-normal-black-14px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.italiana-normal-white-48px {
+  color: var(--white);
+  font-family: var(--font-family-italiana);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 400;
+}
