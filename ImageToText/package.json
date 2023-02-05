@@ -16,6 +16,7 @@
     "dev": "webpack serve --content-base public"
   },
   "dependencies": {
+    "bootstrap": "^5.3.0-alpha1",
     "changedpi": "^1.0.4",
     "file-saver": "^2.0.5",
     "jimp": "^0.21.0",

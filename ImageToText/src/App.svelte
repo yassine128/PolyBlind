@@ -2,10 +2,11 @@
 	import Tesseract from 'tesseract.js';
 	import { global } from 'svelte/internal';
 	
-	var image ="../images/test2.jpg";
+	var filename;
+	var image = "";
 	var response = "";
 	let defaultSpeed = 1; 	
-	var language = "fr-FR";
+	var language = "fr";
 	var pauseOuDemarre = "stop";
 	var isLoading = false; 
 	var currentFont = 30; 
@@ -32,11 +33,11 @@
 
 	function changeLang() {
 		window.speechSynthesis.cancel();
-		if (language == "fr-FR") {
-			language = "en-US";
+		if (language == "fr") {
+			language = "en";
 		} 
 		else {
-			language = "fr-FR";
+			language = "fr";
 		}
 	}
 
@@ -162,8 +163,7 @@
 		console.log('here');
 		document.querySelector('#takepic').click();
 	}
-
-      };
+};
 
       // Add our commands to annyang
       annyang.addCommands(commands);
@@ -171,13 +171,11 @@
   // Start listening.
       annyang.start();
         }
-
 </script>
 
 <main>
-
+	
 	{#if numPage == 0}
-
 	<p>Your text is: </p>
 	<p style="font-size:{currentFont}px;">{response}</p>
 	<button on:click={logTesseract}>Read Image!</button>
@@ -196,8 +194,9 @@
 	<button on:click={pauseStart}>Pause/Start</button>
 	<button on:click={() => changeSpeed(5)}>Read Faster</button>
 	<button on:click={() => changeSpeed(1)}>Normal speed</button>
+	<button on:click={logTesseract}>Read Image!</button>
 	<button on:click={changeLang}>
-		{#if language == "fr-FR"}
+		{#if language == "fr"}
 		French
 		{:else}
 		English
@@ -215,16 +214,10 @@
 		margin: 0 auto;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
 	@media (min-width: 640px) {
 		main {
 			max-width: none;
 		}
 	}
+
 </style>
