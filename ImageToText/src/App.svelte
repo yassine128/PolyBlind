@@ -5,22 +5,46 @@
 	var image;
 	var response = "";
 	let defaultSpeed = 1; 	
+	var language = "fr";
+	var pauseOuDemarre = "stop";
+	var isLoading = false; 
 
-	function fasterSpeech() {
-		defaultSpeed = 5;
+	function changeSpeed(speed) {
+		window.speechSynthesis.cancel();
+		defaultSpeed = speed;
+		console.log(response); 
 		textToVoice(response); 
 	}
 	
-	function normalSpeech() {
-		defaultSpeed = 1;
-		textToVoice(response);
+
+	function changeLang() {
+		window.speechSynthesis.cancel();
+		if (language == "fr") {
+			language = "en-US";
+		} 
+		else {
+			language = "fr";
+		}
+	}
+
+	function pauseStart() {
+		console.log(pauseOuDemarre);
+		if (pauseOuDemarre == "stop") {
+			window.speechSynthesis.pause();
+			pauseOuDemarre = "start";
+		}
+		else {
+			window.speechSynthesis.resume(); 
+			pauseOuDemarre = "stop";
+		}
 	}
 
 	function textToVoice(message) {
+	window.speechSynthesis.cancel();
 	if ('speechSynthesis' in window) {
 		var msg = new SpeechSynthesisUtterance();
 		var voices = window.speechSynthesis.getVoices();
-		msg.lang = 'fr';
+		msg.lang = language; //fr en-US
 		msg.voice = voices[10]; //4 fille 3 gars
 		msg.volume = 1; // de 0 to 1
 		msg.rate = defaultSpeed; // de 0.1 to 10
@@ -49,20 +73,41 @@
 			
 			   console.log(image)
 
-		});	
+	});	
 
+	if (annyang) {
+      // Let's define a command.
+      const commands = {
+    'start': () => { 
+        logTesseract();
+        },
+    'pause':() =>{
+        window.speechSynthesis.pause();
+    },
+    'resume':() =>{
+        window.speechSynthesis.resume();
+    }
+    };
 
+      // Add our commands to annyang
+      annyang.addCommands(commands);
+
+  // Start listening.
+      annyang.start();
+        }
 
 	/*
 	 * Function to detect text in the image 
 	*/
 	function logTesseract() {
+		isLoading = true; 
 		Tesseract.recognize(
 			image,
 			'eng',
 			{logger: m => console.log(m)}
 		).then(({data: { text }}) => {
 			response = text; 
+			isLoading = false; 
 			textToVoice(response); 
 		})
 	}
@@ -70,8 +115,21 @@
 </script>
 
 <main>
-	<button on:click={fasterSpeech}>Read Faster</button>
-	<button on:click={normalSpeech}>Normal speed</button>
+	<h2>
+		{#if isLoading == true}
+		Loading...
+		{/if}
+	</h2>
+	<button on:click={pauseStart}>Pause/Start</button>
+	<button on:click={() => changeSpeed(5)}>Read Faster</button>
+	<button on:click={() => changeSpeed(1)}>Normal speed</button>
+	<button on:click={changeLang}>
+		{#if language == "fr"}
+		French
+		{:else}
+		English
+		{/if}
+	</button>
 	<button on:click={logTesseract}>Read Image!</button>
 	<p>Your text is: </p>
 	<p>{response}</p>
