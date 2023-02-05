@@ -8,12 +8,25 @@
 	var language = "fr";
 	var pauseOuDemarre = "stop";
 	var isLoading = false; 
+	var currentFont = 30; 
+	var numPage = 0;
 
 	function changeSpeed(speed) {
 		window.speechSynthesis.cancel();
 		defaultSpeed = speed;
 		console.log(response); 
 		textToVoice(response); 
+	}
+
+
+	function upFont() {
+		currentFont += 5; 
+	}
+	
+	function downFont() {
+		if (currentFont >= 6) {
+			currentFont -= 5; 
+		}
 	}
 	
 
@@ -50,13 +63,12 @@
 		msg.rate = defaultSpeed; // de 0.1 to 10
 		msg.pitch = 1; // de 0 to 2
 		msg.text = message;
-		window.speechSynthesis.speak(msg);
 	}
 
 	else{console.log(' Speech Synthesis Not Supported'); }
 	}
 
-	let opencambutton = document.querySelector("#opencamera");
+		let opencambutton = document.querySelector("#opencamera");
 		let video = document.querySelector("#video");
 		let takepicbutton = document.querySelector("#takepic");
 		let canvas = document.querySelector("#canvas");
@@ -100,6 +112,7 @@
 	 * Function to detect text in the image 
 	*/
 	function logTesseract() {
+		numPage = 1; 
 		isLoading = true; 
 		Tesseract.recognize(
 			image,
@@ -112,14 +125,30 @@
 		})
 	}
 
+	function goBack() {
+		numPage--; 
+	}
 </script>
 
 <main>
+
+	{#if numPage == 0}
+
+	<p>Your text is: </p>
+	<p style="font-size:{currentFont}px;">{response}</p>
+	<button on:click={logTesseract}>Read Image!</button>
+
+	{:else}
+
+	<p>Your text is: </p>
 	<h2>
 		{#if isLoading == true}
 		Loading...
 		{/if}
 	</h2>
+	<p style="font-size:{currentFont}px;">{response}</p>
+	<button on:click={upFont}>+</button>
+	<button on:click={downFont}>-</button>
 	<button on:click={pauseStart}>Pause/Start</button>
 	<button on:click={() => changeSpeed(5)}>Read Faster</button>
 	<button on:click={() => changeSpeed(1)}>Normal speed</button>
@@ -130,9 +159,8 @@
 		English
 		{/if}
 	</button>
-	<button on:click={logTesseract}>Read Image!</button>
-	<p>Your text is: </p>
-	<p>{response}</p>
+	<button on:click={goBack}>Go Back</button>
+	{/if}
 </main>
 
 <style>
