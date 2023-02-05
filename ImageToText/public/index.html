@@ -3,6 +3,8 @@
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
 
 	<title>Svelte app</title>
 
@@ -13,5 +15,32 @@
 </head>
 
 <body>
+	<button id="opencamera">Start Camera</button>
+	<video id="video" width="1280" height="720" autoplay></video>
+	<button id="takepic">Prendre une photo</button>
+	<canvas id="canvas" width="1280" height="720"></canvas>
+	<script>
+
+
+		let opencambutton = document.querySelector("#opencamera");
+		let video = document.querySelector("#video");
+		let takepicbutton = document.querySelector("#takepic");
+		let canvas = document.querySelector("#canvas");
+		
+		
+		opencambutton.addEventListener('click', async function() {
+			   let stream = await navigator.mediaDevices.getUserMedia( {video: { 
+				width: 1280 , 
+				height: 720 }});
+			video.srcObject = stream;
+		});
+		takepicbutton.addEventListener('click', function() {
+		
+			   canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+			   let image = canvas.toDataURL('image/jpeg');
+			console.log(image)  
+		
+		});		
+		</script>
 </body>
 </html>

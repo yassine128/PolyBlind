@@ -16,6 +16,9 @@
     "dev": "webpack serve --content-base public"
   },
   "dependencies": {
+    "changedpi": "^1.0.4",
+    "jimp": "^0.21.0",
+    "marvinj": "^1.0.0",
     "tesseract.js": "^2.1.1"
   }
 }
