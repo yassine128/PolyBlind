@@ -9,21 +9,25 @@
 	<title>Svelte app</title>
 
 	<link rel='icon' type='image/png' href='/favicon.png'>
-	<link rel='stylesheet' href='/build/bundle.css'>
+	<link rel='stylesheet' href='style.css'>
 
 	<script defer src='/build/bundle.js'></script>
-	<link rel="stylesheet" type="text/css" href="styles.css" />
+
 </head>
 
 <body>
 	<div id="container">
 		<button id="opencamera">Start Camera</button>
-		<video id="video" width="1280" height="720" autoplay></video>
-			
-		<button id="takepic">Prendre une photo</button>
-		<canvas id="canvas" width="1280" height="720"></canvas>
-		<div id="output"></div>
+		<video id="video" width="960" height="540" autoplay></video>
 	</div>
+
+	<div id="container2"></div>
+		<button id="takepic">Prendre une photo</button>
+		<canvas id="canvas" width="960" height="540"></canvas>
+		<div id="output"></div>
+
+	</div>
+
 	<script>
 	</script>
 

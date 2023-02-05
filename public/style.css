@@ -1,3 +1,51 @@
 #container {
     position: absolute;
+    z-index: 9;
+
+  }
+
+
+  #opencamera{
+    top:390px;
+    left:110px;
+    width:130px;
+    height:45px;
+    position: absolute; 
+    background: transparent;
+    border: none !important;
+    font-size:0;
+  z-index: 9;
+  }
+
+
+#takepic{
+  top:500px;
+  left:120px;
+  width:130px;
+  height:45px;
+  position: absolute;
+  background: transparent;
+  border: none !important;
+  font-size:0;
+  z-index: 9;
+}
+
+  #container2 {
+    position: absolute;
+  }
+
+#video{
+top:240px;
+left:500px;
+position:absolute;
+border-radius: 60px;
+}
+
+
+#canvas{
+  top:1250px;
+  left:100px;
+  position:absolute;
+  border-radius: 60px;
+
   }
