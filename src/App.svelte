@@ -238,38 +238,11 @@
 				{#if isLoading == true}
 				Loading...
 				{/if}
-			</div>
+			</div></div>
           </div>
         </div>
       </div>
     </div>
-
-	<!--
- 
-	<p style="font-size:{currentFont}px;">{response}</p>
-	<button on:click={logTesseract}>Read!</button>
-
-	<p>Your text is: </p>
-	<h2>
-		{#if isLoading == true}
-		Loading...
-		{/if}
-	</h2>
-	<p style="font-size:{currentFont}px;">{response}</p>
-	<button on:click={upFont}>+</button>
-	<button on:click={downFont}>-</button>
-	<button on:click={pauseStart}>Pause/Start</button>
-	<button on:click={() => changeSpeed(5)}>Read Faster</button>
-	<button on:click={() => changeSpeed(1)}>Normal speed</button>
-	<button on:click={logTesseract}>Read Image!</button>
-	<button on:click={changeLang}>
-		{#if language == "fr"}
-		French
-		{:else}
-		English
-		{/if}
-	</button>
-	<button on:click={goBack}>Go Back</button>-->
 </main>
 
 <style>
@@ -291,11 +264,6 @@
 @import url("https://px.animaapp.com/63df1a9c241dcc1f34c43355.63df1a9cadcdfbdea71f54e9.xvombGA.hcp.png");
 
 
-.screen a {
-  display: contents;
-  text-decoration: none;
-}
-
 .container-center-horizontal {
   display: flex;
   flex-direction: row;
@@ -315,11 +283,6 @@
 @import url("https://px.animaapp.com/63df1a9c241dcc1f34c43355.63df1a9cadcdfbdea71f54e9.un8gqea.hcp.png");
 
 
-
-.screen a {
-  display: contents;
-  text-decoration: none;
-}
 
 .container-center-horizontal {
   display: flex;
@@ -626,16 +589,6 @@
   margin-left: 33px;
   min-height: 318px;
   width: 52px;
-}
-
-.macbook-pro-14-1 .eng {
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 9px;
-  width: 51px;
 }
 
 .macbook-pro-14-1 .x2 {
