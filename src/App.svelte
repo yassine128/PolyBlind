@@ -238,7 +238,7 @@
 				{#if isLoading == true}
 				Loading...
 				{/if}
-			</div></div>
+			</div>
           </div>
         </div>
       </div>
